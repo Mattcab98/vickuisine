@@ -1,0 +1,26 @@
+:root {
+    --color1: #F2EAD3;
+    --color2: #F9F5F0;
+    --color3: #F4991A;
+    --color4: #9D5C0D;
+    --color5: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color1);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}

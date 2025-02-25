@@ -1,0 +1,162 @@
+a {
+    color: var(--color4);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+    opacity: .85;
+}
+
+.logoVic, .logoVic2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5rem;
+    display: grid;
+    color: var(--color4);
+    place-content: center;
+    padding: 10px;
+}
+
+.logoVic2 {
+    opacity: 0;
+    position: absolute;
+    left: 58px;
+    bottom: -470px;
+    z-index: 200;
+    color: var(--color1);
+    transition: all 2s ease-out;
+
+}
+
+.logoVic2.active {
+    opacity: 1;
+    transition: all 3s ease-out;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: auto;
+    justify-content: space-evenly;
+    background-color: var(--color2);
+    position: relative;
+}
+
+.menu__nav {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    width: 100%;
+    height: 100dvh;
+    
+    background-color: var(--color2);
+    
+
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 1s ease, transform 1s ease;
+
+}
+
+.menu__nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+.container__a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+
+.container__a a {
+    position: relative;
+}
+
+.container__a a::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: var(--color3);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all .5s ease-in;
+
+}
+
+.container__a a:hover::after {
+    opacity: 1;
+    width: 100%;
+    transition: all .5s ease-out;
+}
+
+.container__redes {
+    display: flex;
+    gap: 50px;
+}
+
+.container__redes a{
+    font-size: 1.7rem;
+}
+
+.container__redes a:hover {
+    scale: 1.05;
+    transition: scale 1s ease;
+}
+
+.container__button {
+    width: 30%;
+    position: relative;
+}
+
+.buttonMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 200;
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: var(--color4);
+}
+
+
+@media (min-width: 768px) {
+    
+    .nav {
+
+        padding: 20px;
+    }
+
+    .menu__nav {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: auto;
+    }
+
+    .container__a {
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+    }
+    
+    .container__a a {
+        font-size: 2rem;
+    }
+
+    .buttonMenu, .container__redes {
+        display: none;
+    }
+}
