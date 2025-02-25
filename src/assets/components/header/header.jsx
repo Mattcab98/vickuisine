@@ -13,11 +13,12 @@ const header = () => {
         <>
             <header className='heade'>
 
-                <nav className='nav' id='nav'>
+                <nav className={`nav ${isOpen ? 'active' : ''}`} id='nav'>
 
-                    <div className="container__logo">
-                        <span className='logoVic'>Vickuisine</span>
-                    </div>
+
+                    <span className={`logoVic ${isOpen ? 'active' : ''}`}>Vickuisine</span>
+
+                    <span className={`logoVic2 ${isOpen ? 'active' : ''}`}>Vickuisine</span>
 
                     <div className={`menu__nav ${isOpen ? 'active' : ''}`}>
                         <div className="container__a">
@@ -44,9 +45,6 @@ const header = () => {
                         <button onClick={toggleMenu} className={`buttonMenu ${isOpen ? 'active' : ''}`} id='buttonMenu'>{isOpen ? <FaTimes /> : <FaBars />}</button>
                     </div>
 
-                    <div className="container__logo">
-                        <span className={`logoVic2 ${isOpen ? 'active' : ''}`}>Vickuisine</span>
-                    </div>
                 </nav>
 
             </header>

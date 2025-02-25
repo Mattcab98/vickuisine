@@ -8,36 +8,31 @@ a {
 .logoVic, .logoVic2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 2.5rem;
-    display: grid;
     color: var(--color4);
-    place-content: center;
-    padding: 10px;
 }
 
 .logoVic2 {
-    opacity: 0;
-    position: absolute;
-    left: 58px;
-    bottom: -470px;
+    display: none;
     z-index: 200;
     color: var(--color1);
-    transition: all 2s ease-out;
-
 }
 
 .logoVic2.active {
-    opacity: 1;
-    transition: all 3s ease-out;
+    display: flex;
+    position: absolute;
+    bottom: 15px;
 }
 
 .nav {
     display: flex;
     flex-direction: row;
-    width: 100vw;
-    height: auto;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    width: 100%;
+    height: 15vh;
     background-color: var(--color2);
-    position: relative;
 }
 
 .menu__nav {
@@ -55,18 +50,17 @@ a {
 
     position: absolute;
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(-300%);
     transition: opacity 1s ease, transform 1s ease;
-
+    z-index: 20;
 }
 
 .menu__nav.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(42%);
     transition: opacity 1s ease, transform 1s ease;
 }
-
 
 .container__a {
     display: flex;
@@ -114,20 +108,22 @@ a {
 }
 
 .container__button {
-    width: 30%;
     position: relative;
 }
 
 .buttonMenu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 200;
     font-size: 1.8rem;
     background-color: transparent;
     color: var(--color4);
+    position: relative;
+    z-index: 100;
+    padding: 0;
+    top: 7px;
 }
 
+.buttonMenu.active {
+    right: 0px;
+}
 
 @media (min-width: 768px) {
     
