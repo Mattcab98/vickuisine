@@ -1,4 +1,0 @@
-;/*FB_PKG_DELIM*/
-
-__d("EBFormatUtils",["I64","WATimeUtils"],(function(a,b,c,d,e,f,g){"use strict";var h;function a(a,b){if(a!=null)return(h||(h=d("I64"))).min(a,h.of_float(d("WATimeUtils").millisTime()));switch(b){case"before":return(h||(h=d("I64"))).of_float(d("WATimeUtils").millisTime());case"after":return(h||(h=d("I64"))).zero;default:b;return(h||(h=d("I64"))).max_int}}function b(a,b){switch(b){case"before":return[a,0];case"after":return[0,a];default:b;return[Math.ceil(a/2),Math.ceil(a/2)]}}g.adjustTs=a;g.adjustCount=b}),98);
-__d("MWChatTabOpenThreadCapabilitiesLoggingGated",["cr:10565"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:10565")}),98);

@@ -1,5 +1,6 @@
 import './header.css';
 import UseMenu from './useMenu/useMenu';
+import VickuisineLogo from '../../images/vickuisineLogo.png'
 
 //icons
 import { FaBars, FaTimes, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
@@ -15,10 +16,8 @@ const header = () => {
 
                 <nav className={`nav ${isOpen ? 'active' : ''}`} id='nav'>
 
+                    <img src={VickuisineLogo} alt="" className={`logoVic ${isOpen ? 'active' : ''}`} />
 
-                    <span className={`logoVic ${isOpen ? 'active' : ''}`}>Vickuisine</span>
-
-                    <span className={`logoVic2 ${isOpen ? 'active' : ''}`}>Vickuisine</span>
 
                     <div className={`menu__nav ${isOpen ? 'active' : ''}`}>
                         <div className="container__a">
@@ -39,6 +38,8 @@ const header = () => {
                                 <FaTiktok />
                             </a>
                         </div>
+
+                        <img src={VickuisineLogo} alt="" className={`logoVicNavResponsive ${isOpen ? 'active' : ''}`} />
                     </div>
 
                     <div className="container__button">
